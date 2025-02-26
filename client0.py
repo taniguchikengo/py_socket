@@ -1,10 +1,11 @@
-import socket
 """
 基本的なソケットプログラム
 IPv4
 50000番ポートでサーバー接続
 単方向(受信)
 """
+
+import socket
 
 HOST = "localhost"
 #HOST = "127.0.0.1"     #IPv4ループバック

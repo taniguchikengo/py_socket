@@ -6,6 +6,7 @@ import sys
 IPv4
 50000番ポートでサーバー接続
 双方向(送受信)
+一回だけ
 """
 
 PORT = 50000
@@ -20,12 +21,13 @@ try:
 except:
     print("接続できません")
     sys.exit()
-
-#メッセージ送信
-msg = input("メッセージ入力：")
-client.sendall(msg.encode("utf-8"))
+#サーバーメッセージ受信
 data = client.recv(BUF)
 print("サーバーからのメッセージ：")
 print(data.decode("UTF-8"))
+#メッセージ送信
+msg = input("メッセージ入力：")
+client.sendall(msg.encode("utf-8"))
+
 
 client.close()

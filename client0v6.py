@@ -1,11 +1,11 @@
-from socket import *
-
 """
 基本的なソケットプログラム
 IPv6
 50000番ポートでサーバー接続
 単方向(受信)
 """
+
+from socket import *
 
 HOST = "localhost"
 #HOST = "::1"     #IPv6ループバック

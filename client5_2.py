@@ -1,3 +1,8 @@
+"""
+UDP通信（クライアント）
+デスクトップアプリ
+"""
+
 from socket import *
 import datetime
 import threading
@@ -46,7 +51,6 @@ def main():
 
 #サーバー接続とスレッド作成
 def server_connect(host,tree1):
-
     p = threading.Thread(target=server_h, args=(client,tree1))
     p.setDaemon(True)
 
@@ -54,7 +58,6 @@ def send_msg(host,en):
     msg =en.get()
     client.sendto(msg.encode("UTF-8"), (host, PORT))
     en.delete("0",END)
-
 
 def server_h(client,tree1):
     n = 0
@@ -67,7 +70,7 @@ def server_h(client,tree1):
             print(data.decode("UTF-8"))
         except:
             sys.exit()
-    client.close()
+    #client.close()
 
 main()
 mainloop()

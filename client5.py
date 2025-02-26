@@ -1,3 +1,7 @@
+"""
+UDP通信（クライアント）
+コンソールアプリ
+"""
 from socket import *
 import datetime
 import threading

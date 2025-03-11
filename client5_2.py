@@ -71,7 +71,7 @@ def server_h(client,tree1):
             print(data.decode("UTF-8"))
             n += 1
         except:
-            sys.exit()
+            pass
 
 
 
